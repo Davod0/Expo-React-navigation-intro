@@ -1,14 +1,13 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { RootStackParamList } from "../App";
-import { products } from "../data";
+import { Product, products } from "../data";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Details">;
 
-
-
 export default function DetailsScreen(props: Props) {
   const product = products.find(p => p.id === props.route.params.id);
+
 
   return (
     <View style={styles.container}>
@@ -23,7 +22,8 @@ export default function DetailsScreen(props: Props) {
                 <Text style={styles.productPrice}>Price: ${product?.price.toFixed(2)}</Text>
             
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={[styles.button, styles.addToCartButton]}>
+                    <TouchableOpacity style={[styles.button, styles.addToCartButton]}
+                     onPress={() => props.navigation.navigate("Cart",{id: props.route.params.id})}>
                     <Text style={styles.buttonText}>Add to Cart</Text>
                     </TouchableOpacity>
                     
