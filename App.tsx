@@ -1,20 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import DetailsScreen from './screens/DetailsScreen';
 import HomeScreen from './screens/HomeScreen';
 
-
 export type RootStackParamList = {
   Home: undefined;
-  Details: {id: string};
+  Details: {id: number};
 };
 
-
-
 export const RootStack = createNativeStackNavigator<RootStackParamList>();
-
-
 
 export default function App() {
   return (
