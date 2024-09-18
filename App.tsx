@@ -7,7 +7,7 @@ import HomeScreen from './screens/HomeScreen';
 
 export type RootStackParamList = {
   Home: undefined;
-  Details: undefined;
+  Details: {id: string};
 };
 
 

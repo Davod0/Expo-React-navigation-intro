@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }: HomeProps) {
   return (
     <View style={styles.container}>
       <Text>Home screen</Text>
-      <Button title="Go to Details" onPress={() => navigation.navigate("Details")} />
+      <Button title="Go to Details" onPress={() => navigation.navigate("Details", {id: "1"})} />
     </View>
   );
 }
