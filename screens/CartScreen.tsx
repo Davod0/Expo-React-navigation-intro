@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 import { RootStackParamList } from "../App";
 import { products } from "../data";
 
@@ -16,6 +16,13 @@ export default function CartScreen({navigation, route}: Props) {
         <Text style={styles.productDescription}>{product?.description}</Text>
         <Text style={styles.productPrice}>Price: ${product?.price.toFixed(2)}</Text>
       </View>
+
+        <Pressable style={{ paddingTop: 30 }}>
+          <Button title="Go to TabNavigator" onPress={() => navigation.navigate("TabNavigator")} />
+        </Pressable>
+
+         <Button title="Go back to home page"
+        onPress={() => navigation.popToTop()} color="#f4511e"/>
     </View>
   );
 }
