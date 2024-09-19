@@ -8,7 +8,6 @@ type Props = NativeStackScreenProps<RootStackParamList, "Details">;
 export default function DetailsScreen(props: Props) {
   const product = products.find(p => p.id === props.route.params.id);
 
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Product Details</Text>

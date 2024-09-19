@@ -7,7 +7,8 @@ import { products } from "../data";
 type HomeProps = NativeStackScreenProps<RootStackParamList, "Home">;
 
 
-export default function HomeScreen({ navigation }: HomeProps) {
+export default function HomeScreen({ navigation, route }: HomeProps) {
+  
   return (
     <View style={styles.container}>
         <Text style={styles.title}>Welcome to Shopping Center</Text>

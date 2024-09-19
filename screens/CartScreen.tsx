@@ -6,8 +6,8 @@ import { products } from "../data";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Cart">;
 
-export default function CartScreen(props: Props) {
-  const product = products.find((p) => p.id === props.route.params.id);
+export default function CartScreen({navigation, route}: Props) {
+  const product = products.find((p) => p.id === route.params.id);
   
   return (
     <View style={styles.container}>
