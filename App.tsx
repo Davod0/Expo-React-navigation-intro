@@ -18,7 +18,13 @@ export default function App() {
     <NavigationContainer>
       <StatusBar style="auto"/>
       <RootStack.Navigator initialRouteName="Home">
-        <RootStack.Screen name="Home" component={HomeScreen} options={{ title: 'Shopping Center' }}/>
+        <RootStack.Screen name="Home" component={HomeScreen} 
+        options={{
+         title: 'Shopping Center',
+         headerStyle:{ backgroundColor: '#f4511e'},
+         headerTintColor: '#fff',
+        headerTitleStyle: { fontWeight: 'bold' }
+       }}/>
         <RootStack.Screen name="Details" component={DetailsScreen}  options={({ route }) => ({ title: route.params.name })}/>
         <RootStack.Screen name="Cart" component={CartScreen} />
       </RootStack.Navigator>
