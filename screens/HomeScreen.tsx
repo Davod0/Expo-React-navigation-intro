@@ -14,7 +14,7 @@ export default function HomeScreen({ navigation, route }: HomeProps) {
         <Text style={styles.title}>Welcome to Shopping Center</Text>
 
         <FlatList data={products} renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => navigation.navigate("Details", { id: item.id })}>
+            <TouchableOpacity onPress={() => navigation.navigate("Details", { id: item.id, name: item.name })}>
 
                 <View style={styles.productCard}>
                 <Text style={styles.productName}>{item.name}</Text>
@@ -22,7 +22,7 @@ export default function HomeScreen({ navigation, route }: HomeProps) {
                 <Text style={styles.productPrice}>Price: ${item.price.toFixed(2)}</Text>
 
                 <Pressable style={styles.detailButton}>
-                <Button  title="Go to product details" onPress={() => navigation.navigate("Details", {id: item.id})}/>
+                <Button  title="Go to product details" onPress={() => navigation.navigate("Details", {id: item.id, name: item.name})}/>
                 </Pressable>
                 </View>
             </TouchableOpacity>
