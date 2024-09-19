@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from "react-native";
 import { RootStackParamList } from "../App";
 import { products } from "../data";
 
-
 type Props = NativeStackScreenProps<RootStackParamList, "Cart">;
 
 export default function CartScreen({navigation, route}: Props) {

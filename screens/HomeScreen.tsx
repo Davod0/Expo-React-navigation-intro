@@ -3,11 +3,9 @@ import { Button, FlatList, Pressable, StyleSheet, Text, TouchableOpacity, View }
 import { RootStackParamList } from "../App";
 import { products } from "../data";
 
+type Props = NativeStackScreenProps<RootStackParamList, "Home">;
 
-type HomeProps = NativeStackScreenProps<RootStackParamList, "Home">;
-
-
-export default function HomeScreen({ navigation, route }: HomeProps) {
+export default function HomeScreen({ navigation, route }: Props) {
   
   return (
     <View style={styles.container}>
